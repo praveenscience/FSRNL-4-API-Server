@@ -4,7 +4,7 @@ const app = express.Router();
 
 const Users = [];
 app.get("/", (req, res) => {
-  res.json("You're in Users!");
+  res.json(Users);
 });
 app.post("/", (req, res) => {
   const { Name } = req.body;
