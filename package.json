@@ -1,0 +1,25 @@
+{
+  "name": "fsrnl-4-api-server",
+  "version": "1.0.0",
+  "description": "Simple API Server for GFG FSRNL 4.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://praveenscience@github.com/praveenscience/FSRNL-4-API-Server.git"
+  },
+  "author": "Praveen Kumar",
+  "license": "ISC",
+  "keywords": [
+    "Node JS",
+    "Express JS",
+    "API Server",
+    "JavaScript"
+  ],
+  "bugs": {
+    "url": "https://github.com/praveenscience/FSRNL-4-API-Server/issues"
+  },
+  "homepage": "https://github.com/praveenscience/FSRNL-4-API-Server#readme"
+}
