@@ -11,5 +11,9 @@ app.post("/new", (req, res) => {
   console.log(req.body);
   res.json("Welcome!");
 });
+app.post("/upload", (req, res) => {
+  console.log(req.files);
+  res.json("Welcome!");
+});
 
 module.exports = app;
