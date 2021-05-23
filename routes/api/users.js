@@ -13,11 +13,21 @@ app.post("/new", (req, res) => {
   res.json("Welcome!");
 });
 app.post("/upload", (req, res) => {
-  console.log("+---------------------------+");
-  console.log("| Contents of File Uploaded |");
-  console.log("+---------------------------+");
-  console.log(req.files.Picture.data.toString());
-  res.json("Welcome!");
+  const uploadPath =
+    __dirname +
+    "/../../uploads/" +
+    new Date().getTime() +
+    "-" +
+    req.body.Name +
+    "-" +
+    req.files.Picture.name;
+  req.files.Picture.mv(uploadPath, err => {
+    if (err) {
+      res.status(500).json("Some bad thing happened! Blame Sadaf.");
+    } else {
+      res.json("All good, check your uploads folder.");
+    }
+  });
 });
 
 module.exports = app;
