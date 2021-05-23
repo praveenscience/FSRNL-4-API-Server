@@ -1,5 +1,6 @@
 // Include Express JS.
 const express = require("express");
+const morgan = require("morgan");
 // Import Root Route Handler.
 const root = require("./routes/root");
 // Let's create a new Express Instance.
@@ -7,6 +8,7 @@ const app = express();
 const port = 3000;
 
 // Middlewares
+app.use(morgan("dev"));
 app.use(express.json());
 app.use(
   express.urlencoded({
