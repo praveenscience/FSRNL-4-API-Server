@@ -1,3 +1,4 @@
+const fs = require("fs");
 const express = require("express");
 const app = express.Router();
 
@@ -12,7 +13,10 @@ app.post("/new", (req, res) => {
   res.json("Welcome!");
 });
 app.post("/upload", (req, res) => {
-  console.log(req.files);
+  console.log("+---------------------------+");
+  console.log("| Contents of File Uploaded |");
+  console.log("+---------------------------+");
+  console.log(req.files.Picture.data.toString());
   res.json("Welcome!");
 });
 
