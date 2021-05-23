@@ -6,6 +6,9 @@ const root = require("./routes/root");
 const app = express();
 const port = 3000;
 
+// Middlewares
+app.use(express.json());
+
 // Route Handlers.
 app.use("/", root);
 
