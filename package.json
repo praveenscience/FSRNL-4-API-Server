@@ -4,6 +4,7 @@
   "description": "Simple API Server for GFG FSRNL 4.",
   "main": "server.js",
   "scripts": {
+    "start": "nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/praveenscience/FSRNL-4-API-Server/issues"
   },
-  "homepage": "https://github.com/praveenscience/FSRNL-4-API-Server#readme"
+  "homepage": "https://github.com/praveenscience/FSRNL-4-API-Server#readme",
+  "dependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
