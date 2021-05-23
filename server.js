@@ -2,6 +2,7 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
 const morgan = require("morgan");
+const cors = require("cors");
 // Import Root Route Handler.
 const root = require("./routes/root");
 // Let's create a new Express Instance.
@@ -10,6 +11,7 @@ const port = 3000;
 
 // Middlewares
 app.use(morgan("dev"));
+app.use(cors());
 app.use(express.json());
 app.use(
   express.urlencoded({
