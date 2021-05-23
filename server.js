@@ -8,6 +8,34 @@ const port = 3000;
 app.get("/", (req, res) => {
   res.json("Hello Everyone!");
 });
+app.get("/:sadaf", (req, res) => {
+  res.json("Hey, you requested Sadaf for buying " + req.params.sadaf + "!");
+});
+app.get("/:sadaf/:devi", (req, res) => {
+  if (req.query.form) {
+    res.json({
+      Sadaf: req.params.sadaf,
+      Devi: req.params.devi,
+      Query: req.query
+    });
+  } else if (req.query.arghya) {
+    res.json(
+      "Hey, you requested Sadaf for buying " +
+        req.params.sadaf +
+        " and Devi pays " +
+        req.params.devi +
+        " ₹! This is sponsored by Arghya!"
+    );
+  } else {
+    res.json(
+      "Hey, you requested Sadaf for buying " +
+        req.params.sadaf +
+        " and Devi pays " +
+        req.params.devi +
+        " ₹!"
+    );
+  }
+});
 
 // Listen it in a particular port.
 app.listen(port, () => {
