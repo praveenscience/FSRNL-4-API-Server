@@ -1,5 +1,6 @@
 // Include Express JS.
 const express = require("express");
+const fileUpload = require("express-fileupload");
 const morgan = require("morgan");
 // Import Root Route Handler.
 const root = require("./routes/root");
@@ -15,6 +16,7 @@ app.use(
     extended: true
   })
 );
+app.use(fileUpload());
 
 // Route Handlers.
 app.use("/", root);
